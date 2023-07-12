@@ -26,7 +26,7 @@ function playRound(playerSelection, computerSelection) {
     } else if (playerSelection === "scissors" && computerSelection == "paper") {
         return `You win! ${playerSelection} beats ${computerSelection}`;
     } else {
-        return 'You lose'
+        return `You lose! ${computerSelection} beats ${playerSelection}`;
     }
 };
 console.log('player: ' + playerSelection);
