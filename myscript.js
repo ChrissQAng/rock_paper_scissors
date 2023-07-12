@@ -3,7 +3,7 @@ function getRandomInteger() {
     return Math.floor(Math.random() * 3) +1;
 }
 
-function computerSelection() {
+function getComputerSelection() {
     const randomChoice = getRandomInteger();
     if (randomChoice === 1) {
       return 'rock';
@@ -13,17 +13,23 @@ function computerSelection() {
       return 'scissors';
     }
 };
-
+let computerSelection = getComputerSelection()
 let playerSelection = prompt('Enter either rock, paper or scissors').toLowerCase();
 
 function playRound(playerSelection, computerSelection) {
     if (playerSelection ==  computerSelection) {
-      return 'draw';
-    } else if (playerSelection == "rock" && computerSelection == "paper") {
-        return 'you win';
+      return 'Draw!';
+    } else if (playerSelection == "rock" && computerSelection == "scissors") {
+        return 'You win!';
+    } else if (playerSelection == "paper" && computerSelection == "rock") {
+        return 'You win!';
+    } else if (playerSelection == "scissors" && computerSelection == "paper") {
+        return 'You win!';
+    } else {
+        return 'You lose'
     }
 };
 console.log('player: ' + playerSelection);
-console.log('computer: ' + computerSelection());
+console.log('computer: ' + computerSelection);
 
-console.log(playRound(playerSelection, computerSelection()));
+console.log(playRound(playerSelection, computerSelection));
