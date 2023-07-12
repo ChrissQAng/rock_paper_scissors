@@ -17,14 +17,14 @@ let computerSelection = getComputerSelection()
 let playerSelection = prompt('Enter either rock, paper or scissors').toLowerCase();
 
 function playRound(playerSelection, computerSelection) {
-    if (playerSelection ==  computerSelection) {
+    if (playerSelection ===  computerSelection) {
       return 'Draw!';
-    } else if (playerSelection == "rock" && computerSelection == "scissors") {
-        return 'You win!';
-    } else if (playerSelection == "paper" && computerSelection == "rock") {
-        return 'You win!';
-    } else if (playerSelection == "scissors" && computerSelection == "paper") {
-        return 'You win!';
+    } else if (playerSelection === "rock" && computerSelection == "scissors") {
+        return `You win! ${playerSelection} beats ${computerSelection}`;
+    } else if (playerSelection === "paper" && computerSelection == "rock") {
+        return `You win! ${playerSelection} beats ${computerSelection}`;
+    } else if (playerSelection === "scissors" && computerSelection == "paper") {
+        return `You win! ${playerSelection} beats ${computerSelection}`;
     } else {
         return 'You lose'
     }
