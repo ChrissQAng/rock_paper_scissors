@@ -22,7 +22,7 @@ function playRound(playerSelection, computerSelection) {
     } else if (playerSelection == "rock" && computerSelection == "paper") {
         return 'you win';
     }
-}
+};
 console.log('player: ' + playerSelection);
 console.log('computer: ' + computerSelection());
 
