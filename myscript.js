@@ -3,15 +3,18 @@ function getRandomInteger() {
     return Math.floor(Math.random() * 3) +1;
 }
 
-function getComputerChoice() {
+function computerSelection() {
     const randomChoice = getRandomInteger();
     if (randomChoice === 1) {
-      return 'Rock';
+      return 'rock';
     } else if (randomChoice === 2) {
-      return 'Paper';
+      return 'paper';
     } else {
-      return 'Scissors';
+      return 'scissors';
     }
 };
 
-console.log(getComputerChoice());
+let playerSelection = prompt('Enter either rock, paper or scissors').toLowerCase();
+
+console.log(computerSelection());
+console.log(playerSelection);
