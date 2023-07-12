@@ -1,13 +1,17 @@
-const computerSelection
-
 
 function getRandomInteger() {
     return Math.floor(Math.random() * 3) +1;
 }
 
 function getComputerChoice() {
-    if (getRandomInteger() == 1) {computerSelection = "rock"};
-    else if (getRandomInteger() == 2) {computerSelection = "paper"};
-    else {computerSelection = "scissors"};
-}
-console.log(computerSelection)
+    const randomChoice = getRandomInteger();
+    if (randomChoice === 1) {
+      return 'Rock';
+    } else if (randomChoice === 2) {
+      return 'Paper';
+    } else {
+      return 'Scissors';
+    }
+};
+
+console.log(getComputerChoice());
