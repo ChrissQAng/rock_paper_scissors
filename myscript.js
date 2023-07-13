@@ -13,8 +13,7 @@ function getComputerSelection() {
       return 'scissors';
     }
 };
-let computerSelection = getComputerSelection()
-let playerSelection = prompt('Enter either rock, paper or scissors').toLowerCase();
+
 
 function playRound(playerSelection, computerSelection) {
     if (playerSelection ===  computerSelection) {
@@ -29,7 +28,17 @@ function playRound(playerSelection, computerSelection) {
         return `You lose! ${computerSelection} beats ${playerSelection}`;
     }
 };
+/*console.log('player: ' + playerSelection);
+console.log('computer: ' + computerSelection);
+console.log(playRound(playerSelection, computerSelection));*/
+
+// now the game with 5 rounds and declaration of winner
+
+for (let i=1; i <= 5; i++) { 
+let computerSelection = getComputerSelection()
+let playerSelection = prompt('Enter either rock, paper or scissors').toLowerCase(); 
 console.log('player: ' + playerSelection);
 console.log('computer: ' + computerSelection);
-
+console.log(i);
 console.log(playRound(playerSelection, computerSelection));
+}
