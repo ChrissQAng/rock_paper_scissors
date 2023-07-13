@@ -49,3 +49,14 @@ console.log('computer: ' + computerSelection);
 console.log(playRound(playerSelection, computerSelection));
 console.log('playerpoints :' + playerPoints + '  computerpoints :' + computerPoints)
 }
+
+function winnerDeclaration (playerPoints, computerPoints) {
+    if (playerPoints === computerPoints) {
+        return 'the whole game is a draw!';
+    } else if (playerPoints > computerPoints) {
+        return 'you win the game!';
+    } else {
+        return 'the computer wins the game';
+    }
+}
+console.log(winnerDeclaration(playerPoints, computerPoints))
